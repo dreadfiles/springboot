@@ -23,7 +23,6 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public List<ProductDTO> findAll() {
         List<Product> productList = this.productRepository.findAll();
-        System.out.println(">>> Products from DB: " + productList);
         return this.productMapper.toDTOList(productList);
     }
 
